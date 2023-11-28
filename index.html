@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vesper Winter Days</title>
+  <style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: url('background.png') center center no-repeat; /* Imposta l'immagine di sfondo e il suo posizionamento */
+  background-size: cover; /* Copri completamente l'area senza deformare l'immagine */
+}
+
+    .card {
+      width: 192px;
+      height: 252px;
+      perspective: 1000px;
+	
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+	  
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+	    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .card-front, .card-back {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+	    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card" onclick="flipCard()">
+    <div class="card-inner">
+      <div class="card-face card-front" style="background-image: url('card1.png');"></div>
+      <div class="card-face card-back" id="cardBack"></div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard() {
+      var card = document.querySelector('.card');
+      card.classList.toggle('flipped');
+    }
+
+    function updateCardBack() {
+      var currentDate = new Date();
+      var currentDay = currentDate.getDate();
+      var currentMonth = currentDate.getMonth() + 1; // Aggiungi 1 al risultato di getMonth()
+
+      // Aggiungi qui le condizioni per ogni giorno e mese di dicembre
+      if (currentMonth === 11) {
+        if (currentDay === 28) {
+          document.getElementById('cardBack').style.backgroundImage = "url('1.png')";
+        } else if (currentDay === 2) {
+          document.getElementById('cardBack').style.backgroundImage = "url('2.png')";
+        } else if (currentDay === 3) {
+          document.getElementById('cardBack').style.backgroundImage = "url('3.png')";
+        } else if (currentDay === 4) {
+          document.getElementById('cardBack').style.backgroundImage = "url('4.png')";
+        } else if (currentDay === 5) {
+          document.getElementById('cardBack').style.backgroundImage = "url('5.png')";
+        } else if (currentDay === 6) {
+          document.getElementById('cardBack').style.backgroundImage = "url('6.png')";
+        } else if (currentDay === 7) {
+          document.getElementById('cardBack').style.backgroundImage = "url('7.png')";
+        } else if (currentDay === 8) {
+          document.getElementById('cardBack').style.backgroundImage = "url('8.png')";
+        } else if (currentDay === 9) {
+          document.getElementById('cardBack').style.backgroundImage = "url('9.png')";
+        } else if (currentDay === 10) {
+          document.getElementById('cardBack').style.backgroundImage = "url('10.png')";
+        } else if (currentDay === 11) {
+          document.getElementById('cardBack').style.backgroundImage = "url('11.png')";
+        } else if (currentDay === 12) {
+          document.getElementById('cardBack').style.backgroundImage = "url('12.png')";
+        } else if (currentDay === 13) {
+          document.getElementById('cardBack').style.backgroundImage = "url('13.png')";
+        } else if (currentDay === 14) {
+          document.getElementById('cardBack').style.backgroundImage = "url('14.png')";
+        } else if (currentDay === 15) {
+          document.getElementById('cardBack').style.backgroundImage = "url('15.png')";
+        } else if (currentDay === 16) {
+          document.getElementById('cardBack').style.backgroundImage = "url('16.png')";
+        } else if (currentDay === 17) {
+          document.getElementById('cardBack').style.backgroundImage = "url('17.png')";
+        } else if (currentDay === 18) {
+          document.getElementById('cardBack').style.backgroundImage = "url('18.png')";
+        } else if (currentDay === 19) {
+          document.getElementById('cardBack').style.backgroundImage = "url('19.png')";
+        } else if (currentDay === 20) {
+          document.getElementById('cardBack').style.backgroundImage = "url('20.png')";
+        } else if (currentDay === 21) {
+          document.getElementById('cardBack').style.backgroundImage = "url('21.png')";
+        } else if (currentDay === 22) {
+          document.getElementById('cardBack').style.backgroundImage = "url('22.png')";
+        } else if (currentDay === 23) {
+          document.getElementById('cardBack').style.backgroundImage = "url('23.png')";
+        } else if (currentDay === 24) {
+          document.getElementById('cardBack').style.backgroundImage = "url('24.png')";
+        } else if (currentDay === 25) {
+          document.getElementById('cardBack').style.backgroundImage = "url('25.png')";
+        }
+      }
+      // Puoi estendere questo blocco di condizioni per coprire altri mesi, se necessario
+    }
+
+    // Aggiorna il retro della carta quando la pagina si carica
+    updateCardBack();
+  </script>
+</body>
+</html>
